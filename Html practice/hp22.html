@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+     <h1>사용자 등록 양식</h1>
+     <form action="/submit-form" method="POST">
+        <!-- form은  HTML폼이 어디로, 어떻게 전송할지 지정하는 코드로 action="url"로 구성되어있다 -->
+        <!-- method는 전송방식을 지정하는 코드 -->
+
+        <!-- 사용자 이름 입력 -->
+        <label for="username">사용자 이름:</label>
+        <input type="text" id="username" name="username" placeholder="사용자 이름 입력" maxlength="20" required>
+        <br><br>
+        <!-- label은 입력 항목의 설명을 표시하는 코드 -->
+        <!-- for은 어떤 input과 연결되는지 지정하는 코드 -->
+        <!-- type은 입력창의 타입을 지정하는 코드 text는 글 number는 숫자 radio는 값을 선택하는 형식 등이 존재 -->
+        <!-- placeholder은 입력창 안에 회색으로 힌트 텍스트를 보여주는 코드 -->
+        <!-- maxlength는 최대 글자수 제한, min은 최소 글자 수 제한하는 코드 -->
+        <!-- required는 요구한 값을 입력해야지만 제출 가능하게 하는 코드 -->
+
+        <!-- 이메일 입력 -->
+        <label for="email">이메일:</label>
+        <input type="email" id="email" name="email" placeholder="example@example.com" required>
+        <br><br>
+
+        <!-- 비밀번호 입력 -->
+        <label for="password">비밀번호:</label>
+        <input type="password" id="password" name="password" placeholder="비밀번호 입력" minlength="8" required>
+        <br><br>
+
+        <!-- 나이 입력 -->
+        <label for="age">나이:</label>
+        <input type="number" id="age" name="age" min="1" max="120" placeholder="나이 입력">
+        <br><br>
+
+        <!-- 성별 선택 -->
+        <label>성별:</label>
+        <input type="radio" id="male" name="gender" value="male" required>
+        <label for="male">남성</label>
+        <input type="radio" id="female" name="gender" value="female">
+        <label for="female">여성</label>
+        <br><br>
+
+        <!-- 좋아하는 과일 선택 -->
+        <label for="fruits">좋아하는 과일:</label>
+        <select id="fruits" name="fruits[]" required>
+            <optgroup label="열대 과일">
+                <option value="mango">망고</option>
+                <option value="banana">바나나</option>
+            </optgroup>
+            <optgroup label="기타 과일">
+                <option value="apple">사과</option>
+                <option value="cherry">체리</option>
+            </optgroup>
+            <!-- option은 옵션의 값을 value에 지정하여 옵션화 하는 코드 -->
+            <!-- select는 옵션의 선택 항목을 선택하는 코드 -->
+            <!-- optgroup은 옵션을 그룹화 하여 목록으로 보여주는 코드 -->
+        </select>
+        <br><br>
+
+        <!-- 자기소개 -->
+        <label for="bio">자기소개:</label>
+        <!-- label과 id를 bio로 연결 -->
+        <textarea id="bio" name="bio" rows="4" cols="50" placeholder="자기소개를 입력하세요"></textarea>
+        <!-- rows는 텍스트창의 줄 수를 의미하는 코드 -->
+         <!-- cols는 텍스트창의 가로 너비를 의미하는 코드 -->
+        <br><br>
+
+        <!-- 파일 업로드 -->
+        <label for="profilePic">프로필 사진 업로드:</label>
+        <input type="file" id="profilePic" name="profilePic" accept="image/*">
+        <!-- accept는 뒤에 오는 값에 따라 그 종류의 파일만 업로드하도록 제한하는 코드 -->
+        <br><br>
+
+        <!-- 작업 진행 상황 -->
+        <label for="uploadProgress">업로드 진행 상황:</label>
+        <progress id="uploadProgress" value="70" max="100"></progress> 70%
+        <!-- value는 현재 진행된 값을 나타내는 코드 -->
+        <!-- max는 전체의 기준값을 나타내는 코드 -->
+        <!-- progress는 html의 진행 바를 보여주는 코드 -->
+        <br><br>
+
+        <!-- 양식 제출 -->
+        <button type="submit">제출</button>
+        <!-- type의 submit은 작성한 폼을 제출하는 코드, reset은 리셋하는 코드 -->
+        <button type="reset">초기화</button>
+
+
+    </form>
+</body>
+</html>

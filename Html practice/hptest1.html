@@ -30,11 +30,12 @@
     <h1>
     회원가입
     </h1>
-    <form action="/submit-form" method="POST"></form>
+    <form id="profileForm" action="/submit-form" method="POST">
+    </form>
     
     <label for="username">사용자 이름</label>
     <input type="text" id="username"name="username"maxlength="5"required>
-    <br><br> <!-- hr/로 줄바꿈을 시도하였지만 줄이 생김 -->
+    <br><br>
 
     <label for="email">이메일</label>
     <input type="email" id="email" name="email" required>
@@ -44,9 +45,131 @@
     <input type="password" id="password" name="password" minlength="6" maxlength="14" required>
     <br><br>
 
+    <label for="age">나이:</label>
+    <input type="number" id="age" name="age" min="1" max="120" placeholder="나이 입력">
+    <br><br>
+
+    <label>성별:</label>
+    <input type="radio" id="male" name="gender" value="male" required>
+    <label for="male">남성</label>
+    <input type="radio" id="female" name="gender" value="female">
+    <label for="female">여성</label>
+    <br><br>
+
+    <label for="self">자기소개:</label>
+    <textarea id="self" name="self" rows="4" cols="50" placeholder="자기소개를 입력하세요"></textarea>
+    <br><br>
+
+    <label for="sports">좋아하는 취미:</label>
+        <select id="sports" name="sports[]" required>
+            <optgroup label="취미">
+                <option value="soccer">축구</option>
+                <option value="baseball">야구</option>
+            </optgroup>
+        </select>
+    <br><br>
     
+    <label for="profilePic">프로필 사진 업로드:</label>
+        <input type="file" id="profilePic" name="profilePic" accept="image/*"><span>code.png</span>
+    <br><br>
 
+    <button type="sign">회원가입</button>
+    <button type="reset">초기화</button>
+    <label for="uploadProgress">업로드 진행 상황:</label>
+    <progress id="uploadProgress" value="100" max="100"></progress>
+    <br><br>
 
+    <hr>
+    <h1>
+        프로필 정보
+    </h1>
 
+    <table border="1" width="1400" height="150">
+        <colgroup>
+            <col span="1" style="width:20%; background-color: #f0f0f0;">
+            <col span="2" style="width:80%;">
+        </colgroup>
+        
+        <caption>프로필 정보 요약</caption>
+        <thead>
+            <tr>
+                <th>입력</th>
+                <th>내용</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+                <td>프로필</td>
+                <td>------</td>
+                
+            </tr>
+            <tr>
+                <td>이름</td>
+                <td id="username"></td>
+            </tr>
+            <tr>
+                <td>이메일</td>
+                <td id="email"></td>
+            </tr>
+            <tr>
+                <td>나이</td>
+                <td id="age"></td>
+            </tr>
+            <tr>
+                <td>성별</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>자기소개</td>
+                <td id="self"></td>
+            </tr>
+            <tr>
+                 <td>취미</td>
+                <td id="sports"></td>
+            </tr>
+        </tbody>
+
+        <tfoot>
+             <tr>
+                  <td colspan="2">프로필 정보가 성공적으로 업데이트되었습니다.</td>
+            </tr>
+                    <!-- colspan은 셀을 병합하는 기능 -->
+        </tfoot>
+    </table>
+    <hr>
+    <h1>
+        문의하기
+    </h1>
+    <h5>
+        <i>
+            문의: <a href="#email">kimsyne20022@gamil.com</a>
+        </i>
+        <!-- i는 글을 기울여서 강조하는 코드 -->
+    </h5>
+    
+    <h5>
+        <i>
+            전화: 010-0000-0000
+        </i>
+    </h5>
+
+    <h5>
+        <i>
+            주소: 마곡595빌딩 서울특별시 강서구 내발산동 331-13
+        </i>
+    </h5>
+    
+    <h3>
+        오시는 길
+    </h3>
+
+     <iframe
+        id="magok 595"
+        title="magok 595"
+        width="1400"
+        height="200"
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3162.843763304564!2d126.82588759999999!3d37.5587446!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357c9d1082c1a3ab%3A0x38a8b6f8c19449d6!2z66eI6rOhNTk167mM65Sp!5e0!3m2!1sko!2skr!4v1754382601916!5m2!1sko!2skr">
+    </iframe>
 </body>
 </html>

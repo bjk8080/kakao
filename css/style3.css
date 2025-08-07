@@ -1,0 +1,27 @@
+/* 자손 선택자 */
+div p {
+    color: red;
+}
+/* div 내에 있는 모든 p 요소의 색상을 변경 */
+
+/* 자식 선택자 */
+ul > li {
+    color: green;
+    font-weight: bold;
+}
+
+/* 모든 ul 내에 있는 li중에 "직계" 자식 요소인 것을 변경 */
+
+/* 인접 형제 선택자 */
+h1 + p {
+    color: blue;
+    font-size: 18px;
+}
+/* h1 바로 뒤에오는 p 에게만 적용 */
+
+/* 일반 형제 선택자 */
+h1 ~ p {
+    color: orange;
+    font-style: italic;
+}
+/* h1과 같은 부모를 가지는 모든 p들에게 적용 */

@@ -1,0 +1,81 @@
+h1{
+    color: white; /* 글자 색상을 파란색으로 설정 */
+    text-align: center; /* 텍스트를 가운데 정렬 */
+    background-image:url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSKVxB01IrS9WS-XavnDbzK1_vxyEqekroy-g&s");
+    /* url로 사진을 불러오기 */
+    background-size: cover; 
+    /* 사진을 하나로 덮기 */
+    background-repeat: no-repeat;
+    margin: 0;
+    padding: 0;
+    /* margin,padding 으로 여백 없애기 */
+    height: 200px; /* 높이 지정 */
+}
+.button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 20px;
+  margin: 5px 20px;
+  border: none;
+  cursor: pointer;
+  width: 150px; /* 기본 너비 설정 */
+  transition-property: background-color, width; /* 배경색과 너비에 트랜지션 적용 */
+}
+.container {
+  display: flex; /* 가로로 정렬 */
+  align-items: flex-start; /* 위쪽 정렬 */
+  padding: 20px;
+}
+
+.left-buttons {
+  display: flex;
+  flex-direction: column; /* 세로로 정렬 */
+  gap: 20px; /* 버튼 간격 */
+  margin-right: 310px; /* 버튼과 회원가입과의 간격 */
+}
+.signup-form > form {
+  display: flex;
+  flex-direction: column;
+  /* 세로로 정렬하는 방법 */
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 5px;
+  margin: 0 auto;
+  width: 350px;
+}
+
+/* 인접 형제 선택자 */
+.signup-form label + input {
+  margin-bottom: 10px;
+}
+
+/* 가상 요소 선택자 */
+.signup-form label[for="name"]::before {
+  content: '👤';
+  margin-right: 5px;
+}
+
+/* 박스모델 속성 */
+.signup-form input, .signup-form button {
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  margin-bottom: 15px;
+}
+
+.signup-form button {
+  background-color: #4CAF50;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+footer{
+    background-color: #333;
+    color:white;
+    text-align:center;
+    padding: 0px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}

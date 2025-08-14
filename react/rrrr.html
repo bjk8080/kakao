@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- id가 root인 div 추가 -->
+    <div id="root"></div>
+    
+
+
+    <!-- react 와 react dom -->
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+
+    <!-- babel -->
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script type="text/babel">
+            // app 컴포넌트
+            function App(){
+                return(
+                    <h1>hello, React!</h1>
+                );
+            };
+
+        // id가 root인 노드에 App 컴포넌트를 렌더링
+        ReactDOM.render(<App/>, document.getElementById("root"));
+    </script>
+</body>
+</html>

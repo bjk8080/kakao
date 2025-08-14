@@ -22,6 +22,7 @@ for (let key in person) {
 delete person.name;
 console.log(person.name); // 여전히 "Alice" 출력
 
+
 const product = {
     _price: 100, // 실제 가격을 저장하는 내부 변수 _를 사용시 내부안에서만 사용
     // 접근자 프로퍼티 'price' 정의
